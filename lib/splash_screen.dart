@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => StartUpScreen()),
       );
@@ -37,13 +37,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   "assets/kite_logo.svg",
                   semanticsLabel: "Zerodha",
                   colorFilter: const ColorFilter.mode(AppColors.logoColor, BlendMode.srcIn),
-                  height: 30,
-                  width: 30,
+                  height: 36,
+                  width: 36,
                 ),
-                Text(
-                  'Kite',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
+                const SizedBox(height: 22,),
+                const SizedBox(width: 100.0,height: 4.0,child:
+                LinearProgressIndicator()
+                  ,),
+
               ],
             ),
           ),
