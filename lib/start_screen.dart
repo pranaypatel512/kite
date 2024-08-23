@@ -50,20 +50,18 @@ class StartUpScreen extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
             const SizedBox(height: 32),
+            const Divider(height: 0.3),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/signup');
               },
-              child: const Padding(
-                padding: EdgeInsets.only(top:12.0,bottom: 12.0),
-                child:  ListTile(
-                  contentPadding: EdgeInsets.only(top: 2.0,bottom: 2.0),
-                  title: Text("Open New Account"),
-              trailing: Icon(Icons.perm_identity_outlined, color: AppColors.frenchGray),
+              child: const ListTile(
+                contentPadding: EdgeInsets.only(top: 2.0,bottom: 2.0),
+                title: Text("Open New Account"),
+                            trailing: Icon(Icons.perm_identity_outlined),
+                          ),
             ),
-              ),
-            ),
-            const SizedBox(height: 16),
+            const Divider(height: 0.3),
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/login');
@@ -71,9 +69,10 @@ class StartUpScreen extends StatelessWidget {
               child: const ListTile(
                 title: Text("Login to Kite"),
                 contentPadding: EdgeInsets.only(top: 2.0,bottom: 2.0),
-                trailing: Icon(Icons.login_outlined, color: AppColors.frenchGray),
+                trailing: Icon(Icons.login_outlined),
               ),
             ),
+            const Divider(height: 0.3),
             const SizedBox(height: 32),
             const Text(
               'It is demo app...Start trading on Kite with a hassle-free account setup and enjoy '
