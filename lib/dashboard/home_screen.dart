@@ -49,11 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: "Watchlist"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "Orders"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet), label: "Portfolio"),
-          BottomNavigationBarItem(icon: Icon(Icons.local_offer), label: "Bids"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "Account"),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark_border), label: "Watchlist"),
+          BottomNavigationBarItem(icon: Icon(Icons.book_rounded), label: "Orders"),
+          BottomNavigationBarItem(icon: Icon(Icons.cases_outlined), label: "Portfolio"),
+          BottomNavigationBarItem(icon: Icon(Icons.hardware_outlined), label: "Bids"),
+          BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined), label: "Account"),
         ],
       ),
     );
