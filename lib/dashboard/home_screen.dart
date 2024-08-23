@@ -6,8 +6,6 @@ import 'package:kite/dashboard/watchlist/watch_list_screen.dart';
 import 'bids/bids.dart';
 import 'orders/orders_screen.dart';
 
-import 'package:flutter/material.dart';
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();

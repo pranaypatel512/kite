@@ -11,4 +11,7 @@ class AppColors {
   static const Color richBlack = Color(0xFF16202F);
   static const Color raisinBlack = Color(0xFF1C202A);
   static const Color gunmetal3 = Color(0xFF29323D);
+  static const Color transparent = Color(0x00000000);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color logoColor = Color(0xFFE93D1B);
 }

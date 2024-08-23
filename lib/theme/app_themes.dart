@@ -4,16 +4,16 @@ import 'app_colors.dart';
 
 class AppThemes {
   static final ThemeData lightTheme = ThemeData(
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       primary: AppColors.azure,
       onPrimary: Colors.white,
-      background: AppColors.frenchGray,
+      background: AppColors.white,
       onBackground: AppColors.gunmetal,
       surface: Colors.white,
       onSurface: AppColors.gunmetal,
     ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.azure,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.white,
       foregroundColor: Colors.white,
       titleTextStyle: TextStyle(
         color: Colors.white,
@@ -21,7 +21,7 @@ class AppThemes {
       ),
       elevation: 0, // Modern look, no shadow
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColors.frenchGray,
       selectedItemColor: AppColors.azure,
       unselectedItemColor: AppColors.gunmetal,
@@ -38,15 +38,15 @@ class AppThemes {
       filled: true,
       fillColor: Colors.white,
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.azure),
+        borderSide: const BorderSide(color: AppColors.azure),
         borderRadius: BorderRadius.circular(8),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.azure),
+        borderSide: const BorderSide(color: AppColors.azure),
         borderRadius: BorderRadius.circular(8),
       ),
-      labelStyle: TextStyle(color: AppColors.gunmetal),
-      hintStyle: TextStyle(color: AppColors.gunmetal),
+      labelStyle: const TextStyle(color: AppColors.gunmetal),
+      hintStyle: const TextStyle(color: AppColors.gunmetal),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -57,16 +57,23 @@ class AppThemes {
         ),
       ),
     ),
-    textTheme: TextTheme(
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: ButtonStyle(shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))),
+        side: MaterialStateProperty.all(const BorderSide(
+          color: AppColors.azure,
+        )),
+      ),
+    ),
+    textTheme: const TextTheme(
       headline1: TextStyle(color: AppColors.gunmetal),
       bodyText2: TextStyle(color: AppColors.gunmetal),
     ),
     cardColor: Colors.white,
-    iconTheme: IconThemeData(color: AppColors.azure),
+    iconTheme: const IconThemeData(color: AppColors.azure),
   );
 
   static final ThemeData darkTheme = ThemeData(
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
       primary: AppColors.azure,
       onPrimary: Colors.white,
       background: AppColors.richBlack,
@@ -74,8 +81,8 @@ class AppThemes {
       surface: AppColors.gunmetal,
       onSurface: AppColors.frenchGray,
     ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.gunmetal2,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.richBlack,
       foregroundColor: Colors.white,
       titleTextStyle: TextStyle(
         color: Colors.white,
@@ -83,7 +90,7 @@ class AppThemes {
       ),
       elevation: 0, // Modern look, no shadow
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColors.gunmetal3,
       selectedItemColor: AppColors.azure,
       unselectedItemColor: AppColors.frenchGray,
@@ -100,15 +107,15 @@ class AppThemes {
       filled: true,
       fillColor: AppColors.gunmetal2,
       border: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.azure),
+        borderSide: const BorderSide(color: AppColors.azure),
         borderRadius: BorderRadius.circular(8),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.azure),
+        borderSide: const BorderSide(color: AppColors.azure),
         borderRadius: BorderRadius.circular(8),
       ),
-      labelStyle: TextStyle(color: AppColors.frenchGray),
-      hintStyle: TextStyle(color: AppColors.frenchGray),
+      labelStyle: const TextStyle(color: AppColors.frenchGray),
+      hintStyle: const TextStyle(color: AppColors.frenchGray),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -119,11 +126,19 @@ class AppThemes {
         ),
       ),
     ),
-    textTheme: TextTheme(
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: ButtonStyle(shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0))),
+        side: MaterialStateProperty.all(const BorderSide(
+          color: AppColors.azure,
+        )),
+        padding: MaterialStateProperty.all(EdgeInsets.only(left: 12,top: 8,right: 12,bottom: 8)),
+      ),
+    ),
+    textTheme: const TextTheme(
       headline1: TextStyle(color: AppColors.frenchGray),
       bodyText2: TextStyle(color: AppColors.frenchGray),
     ),
     cardColor: AppColors.gunmetal,
-    iconTheme: IconThemeData(color: AppColors.azure),
+    iconTheme: const IconThemeData(color: AppColors.azure),
   );
 }

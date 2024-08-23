@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kite/splash_screen.dart';
 import 'package:kite/theme/app_themes.dart';
 
+import 'auth/login_screen.dart';
+import 'auth/signup_screen.dart';
 import 'dashboard/home_screen.dart';
 
 void main() {
@@ -19,6 +21,11 @@ class MyApp extends StatelessWidget {
       darkTheme: AppThemes.darkTheme,
       themeMode: ThemeMode.system, // Can be set to ThemeMode.dark or ThemeMode.light as needed
       home: SplashScreen(),
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/signup': (context) => SignupScreen(),
+      },
     );
   }
 }
+
