@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kite/dashboard/portfolio/portfolio.dart';
 import 'package:kite/dashboard/profile/account.dart';
 import 'package:kite/dashboard/watchlist/watch_list_screen.dart';
+import 'package:kite/theme/app_colors.dart';
 
 import 'bids/bids.dart';
 import 'orders/orders_screen.dart';
@@ -45,13 +47,42 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        selectedItemColor: AppColors.azure,
+        unselectedItemColor: AppColors.white,
         onTap: _onItemTapped,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.bookmark_border), label: "Watchlist"),
-          BottomNavigationBarItem(icon: Icon(Icons.book_rounded), label: "Orders"),
-          BottomNavigationBarItem(icon: Icon(Icons.cases_outlined), label: "Portfolio"),
-          BottomNavigationBarItem(icon: Icon(Icons.hardware_outlined), label: "Bids"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined), label: "Account"),
+        items: [
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset("assets/bookmark.svg",
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),),
+              activeIcon: SvgPicture.asset("assets/bookmark.svg",
+                colorFilter: const ColorFilter.mode(AppColors.azure, BlendMode.srcIn),),
+              label: "Watchlist"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset("assets/book.svg",
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),),
+              activeIcon: SvgPicture.asset("assets/book.svg",
+                colorFilter: const ColorFilter.mode(AppColors.azure, BlendMode.srcIn),),
+              label: "Orders"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset("assets/briefcase.svg",
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),),
+              activeIcon: SvgPicture.asset("assets/briefcase.svg",
+                colorFilter: const ColorFilter.mode(AppColors.azure, BlendMode.srcIn),),
+              label: "Portfolio"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset("assets/bids.svg",
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),),
+              activeIcon: SvgPicture.asset("assets/bids.svg",
+                colorFilter: const ColorFilter.mode(AppColors.azure, BlendMode.srcIn),),
+              label: "Bids"),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset("assets/user_icon.svg",
+                colorFilter: const ColorFilter.mode(AppColors.white, BlendMode.srcIn),),
+              activeIcon: SvgPicture.asset("assets/user_icon.svg",
+                colorFilter: const ColorFilter.mode(AppColors.azure, BlendMode.srcIn),),
+              label: "Account"),
         ],
       ),
     );
