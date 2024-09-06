@@ -4,7 +4,6 @@ import 'package:kite/theme/app_themes.dart';
 
 import 'auth/login_screen.dart';
 import 'auth/signup_screen.dart';
-import 'dashboard/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

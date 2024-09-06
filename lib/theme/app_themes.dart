@@ -68,9 +68,11 @@ class AppThemes {
           )),
         ),
       ),
-      textTheme: const TextTheme(
-        headline1: TextStyle(color: AppColors.gunmetal),
-        bodyText2: TextStyle(color: AppColors.gunmetal),
+      textTheme: TextTheme(
+        displayLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 24,color: AppColors.gunmetal),
+        bodyLarge: TextStyle(fontFamily: 'Inter', fontSize: 16),
+        bodyMedium: TextStyle(fontFamily: 'Inter', fontSize: 14,color: AppColors.gunmetal),
+        labelLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 14),
       ),
       cardColor: Colors.white,
       iconTheme: const IconThemeData(color: AppColors.azure),
@@ -146,9 +148,11 @@ class AppThemes {
               EdgeInsets.only(left: 12, top: 8, right: 12, bottom: 8)),
         ),
       ),
-      textTheme: const TextTheme(
-        headline1: TextStyle(color: AppColors.frenchGray),
-        bodyText2: TextStyle(color: AppColors.frenchGray),
+      textTheme: TextTheme(
+        displayLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 24,color: AppColors.frenchGray),
+        bodyLarge: TextStyle(fontFamily: 'Inter', fontSize: 16),
+        bodyMedium: TextStyle(fontFamily: 'Inter', fontSize: 14,color: AppColors.frenchGray),
+        labelLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 14),
       ),
       cardColor: AppColors.gunmetal,
       iconTheme: const IconThemeData(color: AppColors.azure),
