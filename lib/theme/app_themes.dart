@@ -68,18 +68,29 @@ class AppThemes {
           )),
         ),
       ),
-      textTheme: TextTheme(
-        displayLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 24,color: AppColors.gunmetal),
-        bodyLarge: TextStyle(fontFamily: 'Inter', fontSize: 16),
-        bodyMedium: TextStyle(fontFamily: 'Inter', fontSize: 14,color: AppColors.gunmetal),
-        labelLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 14),
+      textTheme: const TextTheme(
+        displayLarge: TextStyle(fontSize: 57, fontWeight: FontWeight.bold, color: Colors.black),
+        displayMedium: TextStyle(fontSize: 45, fontWeight: FontWeight.bold, color: Colors.black),
+        displaySmall: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
+        headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.black),
+        headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black),
+        headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+        titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.black),
+        titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
+        titleSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black),
+        bodyLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black87),
+        bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black87),
+        bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.normal, color: Colors.black87),
+        labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black),
+        labelMedium: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.black),
+        labelSmall: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: Colors.black),
       ),
       cardColor: Colors.white,
       iconTheme: const IconThemeData(color: AppColors.azure),
       listTileTheme: ListTileThemeData(
           iconColor:  AppColors.richBlack),
       dividerTheme:
-          const DividerThemeData(color: AppColors.cadetGray, thickness: 0.3));
+          const DividerThemeData(color: AppColors.frenchGray, thickness: 0.1));
 
   static final ThemeData darkTheme = ThemeData(
       colorScheme: const ColorScheme.dark(
@@ -148,16 +159,27 @@ class AppThemes {
               EdgeInsets.only(left: 12, top: 8, right: 12, bottom: 8)),
         ),
       ),
-      textTheme: TextTheme(
-        displayLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 24,color: AppColors.frenchGray),
-        bodyLarge: TextStyle(fontFamily: 'Inter', fontSize: 16),
-        bodyMedium: TextStyle(fontFamily: 'Inter', fontSize: 14,color: AppColors.frenchGray),
-        labelLarge: TextStyle(fontFamily: 'Inter', fontWeight: FontWeight.bold, fontSize: 14),
+      textTheme: const  TextTheme(
+        displayLarge: TextStyle(fontSize: 57, fontWeight: FontWeight.bold, color: Colors.white),
+        displayMedium: TextStyle(fontSize: 45, fontWeight: FontWeight.bold, color: Colors.white),
+        displaySmall: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+        headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
+        headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+        headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+        titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.w400, color: Colors.white),
+        titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+        titleSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: Colors.white),
+        bodyLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.normal, color: Colors.white70),
+        bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white70),
+        bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.normal, color: Colors.white70),
+        labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
+        labelMedium: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white),
+        labelSmall: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: Colors.white),
       ),
       cardColor: AppColors.gunmetal,
       iconTheme: const IconThemeData(color: AppColors.azure),
       listTileTheme: ListTileThemeData(
           iconColor:  AppColors.frenchGray),
       dividerTheme:
-          const DividerThemeData(color: AppColors.cadetGray, thickness: 0.3));
+          const DividerThemeData(color: AppColors.frenchGray, thickness: 0.1));
 }
