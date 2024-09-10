@@ -46,8 +46,12 @@ class AppThemes {
           borderSide: const BorderSide(color: AppColors.azure),
           borderRadius: BorderRadius.circular(4),
         ),
-        labelStyle: const TextStyle(color: AppColors.gunmetal),
-        hintStyle: const TextStyle(color: AppColors.gunmetal),
+        hintStyle:const TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
+        labelStyle:const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
+            prefixStyle: const TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -55,7 +59,7 @@ class AppThemes {
           // Full-width button
           foregroundColor: AppColors.azure,
           disabledForegroundColor: Colors.white,
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.normal,
               color: AppColors.white),
@@ -107,9 +111,11 @@ class AppThemes {
       ),
       cardColor: Colors.white,
       iconTheme: const IconThemeData(color: AppColors.azure),
-      listTileTheme: ListTileThemeData(iconColor: AppColors.richBlack),
+      listTileTheme: const ListTileThemeData(iconColor: AppColors.richBlack),
       dividerTheme:
-          const DividerThemeData(color: AppColors.frenchGray, thickness: 0.1));
+          const DividerThemeData(color: AppColors.frenchGray, thickness: 0.1),
+          
+          );
 
   static final ThemeData darkTheme = ThemeData(
       colorScheme: const ColorScheme.dark(
@@ -155,14 +161,12 @@ class AppThemes {
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.gunmetal3,width: 2.0),
         ),
-        labelStyle: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            color: AppColors.frenchGray),
-        hintStyle: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.normal,
-            color: AppColors.frenchGray),
+        hintStyle:const TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
+        labelStyle:const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
+            prefixStyle: const TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -201,7 +205,7 @@ class AppThemes {
             width: 2
           )),
           padding: MaterialStateProperty.all(
-              EdgeInsets.only(left: 12, top: 8, right: 12, bottom: 8)),
+              const EdgeInsets.only(left: 12, top: 8, right: 12, bottom: 8)),
         ),
       ),
       textTheme: const TextTheme(
@@ -238,7 +242,7 @@ class AppThemes {
       ),
       cardColor: AppColors.gunmetal,
       iconTheme: const IconThemeData(color: AppColors.azure),
-      listTileTheme: ListTileThemeData(iconColor: AppColors.frenchGray),
+      listTileTheme: const ListTileThemeData(iconColor: AppColors.frenchGray),
       dividerTheme:
           const DividerThemeData(color: AppColors.frenchGray, thickness: 0.1));
 }

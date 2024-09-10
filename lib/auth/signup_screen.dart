@@ -7,6 +7,8 @@ import '../theme/app_colors.dart';
 import 'otp_screen.dart';
 
 class SignupScreen extends StatelessWidget {
+    final _userPhoneController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +44,7 @@ class SignupScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 16),
                 Text(
                   'Open your account',
                   style: Theme.of(context).textTheme.headline5,
@@ -55,16 +58,34 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
-                TextField(
-                  decoration: InputDecoration(
-                    prefixText: '+91 ',
-                    hintText: 'Enter your phone number',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
+                
+                 TextField(
+                controller: _userPhoneController,
+                decoration:  InputDecoration(
+                  labelText: 'Phone number',
+                  hintText: 'Phone number',
+                  border: const OutlineInputBorder(),
+                prefix: Row(
+              mainAxisSize: MainAxisSize.min, // Ensures the prefix takes minimal space
+              children: [
+                const Text(
+                  '+91', // Country Code
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
-                  keyboardType: TextInputType.phone,
                 ),
+                const SizedBox(width: 8), // Space between country code and pipe
+                Container(
+                  height: double.infinity, // Height of the pipe
+                  width: 1, // Width of the pipe
+                  color: Colors.grey, // Pipe color
+                ),
+                const SizedBox(width: 8), // Space between the pipe and input text
+              ],
+            ),
+                ),
+              ),
                 const SizedBox(height: 32),
                 ElevatedButton(
                   onPressed: () {
