@@ -38,6 +38,7 @@ class AppThemes {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
+    
         border: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.azure),
           borderRadius: BorderRadius.circular(2),
@@ -47,11 +48,11 @@ class AppThemes {
           borderRadius: BorderRadius.circular(4),
         ),
         hintStyle:const TextStyle(
-            fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
+            fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
         labelStyle:const TextStyle(
-            fontSize: 20, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
-            prefixStyle: const TextStyle(
             fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
+            prefixStyle: const TextStyle(
+            fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.gunmetal),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -161,12 +162,12 @@ class AppThemes {
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.gunmetal3,width: 2.0),
         ),
-        hintStyle:const TextStyle(
+        hintStyle:TextStyle(
+            fontSize: 16, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
+        labelStyle:TextStyle(
             fontSize: 18, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
-        labelStyle:const TextStyle(
-            fontSize: 20, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
-            prefixStyle: const TextStyle(
-            fontSize: 18, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
+            prefixStyle: TextStyle(
+            fontSize: 16, fontWeight: FontWeight.w400, color: AppColors.frenchGray),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

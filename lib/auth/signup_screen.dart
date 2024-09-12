@@ -63,23 +63,23 @@ class SignupScreen extends StatelessWidget {
                 controller: _userPhoneController,
                 decoration:  InputDecoration(
                   labelText: 'Phone number',
-                  hintText: 'Phone number',
                   border: const OutlineInputBorder(),
                 prefix: Row(
               mainAxisSize: MainAxisSize.min, // Ensures the prefix takes minimal space
               children: [
-                const Text(
+                Padding(padding: const EdgeInsets.only(left: 4.0), // Padding for better alignment
+                child: Text(
                   '+91', // Country Code
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                  style: Theme.of(context).inputDecorationTheme.labelStyle,
+                )),
                 const SizedBox(width: 8), // Space between country code and pipe
                 Container(
-                  height: double.infinity, // Height of the pipe
                   width: 1, // Width of the pipe
-                  color: Colors.grey, // Pipe color
+                  color: AppColors.cadetGray, // Pipe color
+                  // Match height of the TextField
+                  constraints: const BoxConstraints(
+                    maxHeight: 24, // Match TextField height
+                  ),
                 ),
                 const SizedBox(width: 8), // Space between the pipe and input text
               ],

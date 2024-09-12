@@ -18,7 +18,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       padding: const EdgeInsets.only(left: 4.0, right: 12.0, top: 4.0),
       child: AppBar(
         leading: IconButton(
-          icon: const AssetVectorIcon(path: "assets/ic_back.svg"),
+          icon:  AssetVectorIcon(path: "assets/ic_back.svg"),
           onPressed: () {
             Navigator.of(context)
                 .pop(); // Navigates back to the previous screen
@@ -44,28 +44,30 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
 
 class AssetVectorIcon extends StatelessWidget {
   final String path;
-  final int height;
-  final int width;
+  final double height;
+  final double width;
+   Color? tintColor;
 
-  const AssetVectorIcon({
+   AssetVectorIcon({
     Key? key,
     required this.path,
     this.height=32,
     this.width=32,
+    this.tintColor=AppColors.white
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     // Check if the current theme is dark mode
     final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
-
+    
     // Update color based on the current theme
     return SvgPicture.asset(
       path,
-      width: 32,
-      height: 32,
+      width: width,
+      height: height,
       colorFilter: ColorFilter.mode(
-        isDarkMode ? Colors.white : Colors.black, // Use your custom colors here
+        tintColor ?? (isDarkMode ? Colors.grey : Colors.black), // Use your custom colors here
         BlendMode.srcIn,
       ),
     );
