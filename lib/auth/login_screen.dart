@@ -2,10 +2,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kite/auth/signup_screen.dart';
+import 'package:kite/auth/verify_otp.dart';
 import 'package:kite/extension/extensions.dart';
 
 import '../widgets/common_app_bar.dart';
-import 'otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     if (_formKey.currentState?.validate() ?? false) {
                       // Proceed to OTP Screen if the form is valid
                       Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => OTPScreen()),
+                        MaterialPageRoute(builder: (_) => VerifyOtp()),
                       );
                     }
                   },

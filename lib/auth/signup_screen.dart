@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kite/auth/verify_otp.dart';
 
 import '../theme/app_colors.dart';
-import 'otp_screen.dart';
 
 class SignupScreen extends StatelessWidget {
     final _userPhoneController = TextEditingController();

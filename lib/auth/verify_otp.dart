@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kite/auth/set_up_finder_print.dart';
 import 'package:kite/dashboard/home_screen.dart';
 import 'package:kite/widgets/common_app_bar.dart';
 import 'package:kite/widgets/resend_otp_widget.dart';
@@ -73,7 +74,7 @@ class VerifyOtp extends StatelessWidget {
                   border: OutlineInputBorder(),
                   suffixIcon: GestureDetector(
                     onTap: ()=> Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => HomeScreen()),
+                      MaterialPageRoute(builder: (_) => SetUpFingerPrint()),
                     ),
                     child: UnconstrainedBox(
                         child: AssetVectorIcon(

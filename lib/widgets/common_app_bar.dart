@@ -17,6 +17,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 4.0, right: 12.0, top: 4.0),
       child: AppBar(
+        title: Text(title),
         leading: IconButton(
           icon:  AssetVectorIcon(path: "assets/ic_back.svg"),
           onPressed: () {
