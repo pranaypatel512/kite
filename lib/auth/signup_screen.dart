@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kite/auth/verify_otp.dart';
 
 import '../theme/app_colors.dart';
 import 'otp_screen.dart';
@@ -90,7 +91,7 @@ class SignupScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => OTPScreen()),
+                      MaterialPageRoute(builder: (_) => VerifyOtp()),
                     );
                   },
                   child: const Text('Continue'),
