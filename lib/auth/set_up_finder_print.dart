@@ -1,13 +1,71 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:kite/dashboard/home_screen.dart';
 import 'package:kite/extension/extensions.dart';
 import 'package:kite/widgets/common_app_bar.dart';
+import 'package:local_auth/local_auth.dart';
 
 
-class SetUpFingerPrint extends StatelessWidget {
+class SetUpFingerPrint extends StatefulWidget {
 
+  @override
+  State<SetUpFingerPrint> createState() => _SetUpFingerPrintState();
+}
+
+class _SetUpFingerPrintState extends State<SetUpFingerPrint> {
+   final LocalAuthentication auth = LocalAuthentication();
+
+  bool _canCheckBiometrics = false;
+  bool _isAuthenticated = false;
+   @override
+  void initState() {
+    super.initState();
+    _checkBiometrics();
+  }
+
+  // Check if the device supports biometrics
+  Future<void> _checkBiometrics() async {
+    bool canCheckBiometrics;
+    try {
+      canCheckBiometrics = await auth.canCheckBiometrics;
+    } catch (e) {
+      canCheckBiometrics = false;
+    }
+
+    setState(() {
+      _canCheckBiometrics = canCheckBiometrics;
+    });
+  }
+
+  // Perform authentication using phone lock or biometrics
+  Future<void> _authenticate() async {
+    bool authenticated = false;
+    try {
+      authenticated = await auth.authenticate(
+        localizedReason: 'Please authenticate to access',
+        options: const AuthenticationOptions(
+          useErrorDialogs: true,
+          stickyAuth: true,
+          biometricOnly: false,  // Allow device authentication (PIN, pattern, etc.)
+        ),
+      );
+      if(authenticated){
+        // Navigate to Home Screen
+                    Navigator.pushAndRemoveUntil(context,
+                          MaterialPageRoute(builder: (_) => HomeScreen()),
+                          (Route<dynamic> route) => false, // Remove all previous routes
+                        );
+      }
+      
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,11 +115,7 @@ class SetUpFingerPrint extends StatelessWidget {
                 width: 140,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Navigate to Home Screen
-                    Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(builder: (_) => HomeScreen()),
-                          (Route<dynamic> route) => false, // Remove all previous routes
-                        );
+                    _authenticate();
                   },
                   child: Text('Enable Now'),
                 ),
