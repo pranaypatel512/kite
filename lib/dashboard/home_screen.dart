@@ -4,6 +4,7 @@ import 'package:kite/dashboard/portfolio/portfolio.dart';
 import 'package:kite/dashboard/profile/account.dart';
 import 'package:kite/dashboard/watchlist/watch_list_screen.dart';
 import 'package:kite/theme/app_colors.dart';
+import 'package:kite/widgets/easy_animated_indexed_stack.dart';
 
 import 'bids/bids.dart';
 import 'orders/orders_screen.dart';
@@ -44,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(_title)),
-      body: _screens[_selectedIndex],
+      body: EasyAnimatedIndexedStack(index: _selectedIndex,children: _screens,),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         showSelectedLabels: true,
